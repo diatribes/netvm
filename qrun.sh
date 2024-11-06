@@ -9,5 +9,5 @@ qemu-system-x86_64 \
     -enable-kvm  \
     -kernel ./bzImage \
     -append "notsc" \
-    -initrd ./rootfs.cpio
-
+    -initrd ./rootfs.cpio \
+    -nic model=e1000
