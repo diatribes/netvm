@@ -1,3 +1,11 @@
+cache
+bzImage
+src/overlay/carl-exit
+src/overlay/dumb-init
+*.cpio
+*.gz
+*.xz
+
 # Prerequisites
 *.d
 
