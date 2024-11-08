@@ -9,6 +9,9 @@ qemu-system-x86_64 \
     -enable-kvm  \
     -kernel ./bzImage \
     -append "notsc" \
+    -netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9 \
     -nic user,model=virtio-net-pci \
-    -nic model=e1000 \
     -initrd ./rootfs.cpio
+
+
+
