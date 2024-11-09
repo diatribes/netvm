@@ -6,6 +6,7 @@ src/overlay/dumb-init
 src/overlay/usr/bin/dbclient
 src/overlay/usr/bin/dropbearconvert
 src/overlay/usr/bin/dropbearkey
+src/overlay/usr/bin/pktsnif
 
 *.cpio
 *.gz
