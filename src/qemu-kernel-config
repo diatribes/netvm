@@ -186,7 +186,7 @@ CONFIG_PRINTK=y
 # CONFIG_FUTEX is not set
 # CONFIG_EPOLL is not set
 # CONFIG_SIGNALFD is not set
-# CONFIG_TIMERFD is not set
+CONFIG_TIMERFD=y
 # CONFIG_EVENTFD is not set
 # CONFIG_SHMEM is not set
 # CONFIG_AIO is not set
