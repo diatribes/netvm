@@ -5,5 +5,5 @@ mount -t sysfs none /sys
 echo $(uname -a)
 ifconfig eth0 up
 sdhcp
-/dumb-init /bin/sh
+/dumb-init /usr/bin/oksh
 /carl-exit

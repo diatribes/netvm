@@ -8,6 +8,13 @@ mkdir -vp "${SRCPATH}/overlay/usr/bin"
 cp -v sdhcp "${SRCPATH}/overlay/usr/bin/"
 cd ..
 
+git clone https://github.com/ibara/oksh.git
+cd oksh
+./configure --enable-static --cc=musl-gcc
+make
+cp oksh "${SRCPATH}/overlay/usr/bin/oksh"
+cd ..
+
 if [ ! -d "toybox" ]; then
     git clone https://github.com/landley/toybox
     cd toybox

@@ -1,5 +1,6 @@
 cache
 bzImage
+src/overlay/usr/bin/oksh
 src/overlay/carl-exit
 src/overlay/dumb-init
 *.cpio
