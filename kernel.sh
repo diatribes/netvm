@@ -1,6 +1,5 @@
 #!/bin/bash
 CACHEDIR=cache
-KERNELVER=6.6.58
 mkdir -p "${CACHEDIR}"
 cd "${CACHEDIR}"
 if [ ! -d "linux-${KERNELVER}" ]; then
