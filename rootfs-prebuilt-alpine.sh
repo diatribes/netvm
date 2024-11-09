@@ -1,7 +1,7 @@
 #!/bin/bash 
-CACHEDIR=cache
-curl -o "${CACHEDIR}/alpine-rootfs.tar.gz" "https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-minirootfs-3.20.3-x86_64.tar.gz"
-cd "${CACHEDIR}"
+CACHEPATH=cache
+curl -o "${CACHEPATH}/alpine-rootfs.tar.gz" "https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-minirootfs-3.20.3-x86_64.tar.gz"
+cd "${CACHEPATH}"
 mkdir -p rootfs
 cd rootfs
 tar xvf ../alpine-rootfs.tar.gz

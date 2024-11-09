@@ -1,6 +1,5 @@
 #!/bin/bash 
-CACHEDIR=cache
-cd "${CACHEDIR}"
+cd "${CACHEPATH}"
 
 git clone git://git.2f30.org/sdhcp
 cd sdhcp
@@ -18,7 +17,7 @@ else
     cd toybox
 fi
 cp -v "${SRCPATH}/qemu-toybox-config" .config
-LINUX="${CACHEDIR}/${KERNELVER}" LDFLAGS=--static CROSS_COMPILE=x86_64-linux-musl-cross/bin/x86_64-linux-musl- make root
+LINUX="${CACHEPATH}/${KERNELVER}" LDFLAGS=--static CROSS_COMPILE=x86_64-linux-musl-cross/bin/x86_64-linux-musl- make root
 cp -v "${SRCPATH}/dumb-init/dumb-init" "${SRCPATH}/overlay"
 cp -v "${SRCPATH}/carl-exit/carl-exit" "${SRCPATH}/overlay"
 cp -vr ${SRCPATH}/overlay/* root/x86_64/fs/
