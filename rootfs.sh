@@ -5,20 +5,22 @@ git clone git://git.2f30.org/sdhcp
 cd sdhcp
 make CC=musl-gcc LDFLAGS=--static
 mkdir -vp "${SRCPATH}/overlay/usr/bin"
-cp -v sdhcp "${SRCPATH}/overlay/usr/bin/"
+cp -v sdhcp "${SRCPATH}/overlay/usr/bin/sdhcp"
 cd ..
 
 git clone https://github.com/ibara/oksh.git
 cd oksh
 ./configure --enable-static --cc=musl-gcc
 make
-cp oksh "${SRCPATH}/overlay/usr/bin/oksh"
+cp -v oksh "${SRCPATH}/overlay/usr/bin/oksh"
 cd ..
+
+sleep 10
 
 if [ ! -d "toybox" ]; then
     git clone https://github.com/landley/toybox
     cd toybox
-    wget https://landley.net/bin/toolchains/latest/x86_64-linux-musl-cross.tar.xz
+    curl -o x86_64-linux-musl-cross.tar.xz https://landley.net/bin/toolchains/latest/x86_64-linux-musl-cross.tar.xz
     tar xvf x86_64-linux-musl-cross.tar.xz
 else
     cd toybox

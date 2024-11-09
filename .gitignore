@@ -3,6 +3,10 @@ bzImage
 src/overlay/usr/bin/oksh
 src/overlay/carl-exit
 src/overlay/dumb-init
+src/overlay/usr/bin/dbclient
+src/overlay/usr/bin/dropbearconvert
+src/overlay/usr/bin/dropbearkey
+
 *.cpio
 *.gz
 *.xz
