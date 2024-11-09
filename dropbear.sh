@@ -8,4 +8,3 @@ mkdir -p "${SRCPATH}/overlay/usr/bin"
 cp -v dbclient "${SRCPATH}/overlay/usr/bin"
 cp -v dropbearkey "${SRCPATH}/overlay/usr/bin"
 cp -v dropbearconvert "${SRCPATH}/overlay/usr/bin"
-sleep 10

@@ -15,8 +15,6 @@ make
 cp -v oksh "${SRCPATH}/overlay/usr/bin/oksh"
 cd ..
 
-sleep 10
-
 if [ ! -d "toybox" ]; then
     git clone https://github.com/landley/toybox
     cd toybox
