@@ -6,4 +6,5 @@ source config.sh
 ./carl-exit.sh
 ./dropbear.sh
 ./pktsnif.sh
+./vi.sh
 ./rootfs.sh

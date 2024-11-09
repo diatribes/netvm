@@ -32,6 +32,7 @@ LINUX="${CACHEPATH}/${KERNELVER}" LDFLAGS=--static CROSS_COMPILE=x86_64-linux-mu
 cp -v "${SRCPATH}/dumb-init/dumb-init" "${SRCPATH}/overlay"
 cp -v "${SRCPATH}/carl-exit/carl-exit" "${SRCPATH}/overlay"
 cp -v "${CACHEPATH}/pktsnif/pktsnif" "${SRCPATH}/overlay/usr/bin"
+cp -v "${CACHEPATH}/neatvi/vi" "${SRCPATH}/overlay/usr/bin"
 cp -vr ${SRCPATH}/overlay/* root/x86_64/fs/
 chmod +x root/x86_64/fs/dumb-init
 chmod +x root/x86_64/fs/carl-exit
