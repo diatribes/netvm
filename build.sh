@@ -1,5 +1,6 @@
 #!/bin/bash
-export KERNELVER=6.11.7
+source config.sh
+
 ./kernel.sh
 ./dumb-init.sh
 ./carl-exit.sh

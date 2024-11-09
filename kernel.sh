@@ -7,6 +7,6 @@ if [ ! -d "linux-${KERNELVER}" ]; then
     tar xvf "linux-${KERNELVER}.tar.xz"
 fi
 cd "linux-${KERNELVER}"
-cp ../../src/qemu-kernel-config .config
+cp "${SRCPATH}/qemu-kernel-config" .config
 make -j8 && cp arch/x86/boot/bzImage ../../
 
