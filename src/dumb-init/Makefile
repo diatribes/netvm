@@ -1,6 +1,6 @@
 .SILENT:
 
-all: clean build
+all: clean build check distcheck
 
 BIN := dumb-init
 SRC := dumb-init.c

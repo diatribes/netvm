@@ -1,6 +1,6 @@
 .SILENT:
 
-all: clean build
+all: clean build check distcheck
 
 #####
 ## CARL_EXIT_BIN := src/carl-exit/carl-exit
