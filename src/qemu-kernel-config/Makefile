@@ -37,8 +37,6 @@ bzImage: $(BUILD_DIR)/arch/x86/boot/bzImage
 	@cp $< $@
 	@file $@
 
-
-
 clean:
-	@rm -rf $(KERNEL_DIR)
+	@rm -rf $(BUILD_DIR)
 	@rm -f bzImage
