@@ -2,7 +2,7 @@
 
 all: build check distcheck
 
-LINUX_VERSIONS := 6.11.7 6.8.12
+LINUX_VERSIONS := 6.8.12
 LINUX_DIRS := $(addprefix linux-,$(LINUX_VERSIONS))
 LINUX_TARS := $(addsuffix .tar.xz,$(LINUX_DIRS))
 
