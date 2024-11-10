@@ -1,4 +1,5 @@
 cache
+!cache/Makefile
 bzImage
 src/overlay/usr/bin/oksh
 src/overlay/carl-exit

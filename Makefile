@@ -1,7 +1,7 @@
 .SILENT:
 TOPTARGETS := all build check distcheck clean
 
-SUBDIRS := $(wildcard src/*/.)
+SUBDIRS := $(wildcard src/*/. cache/.)
 
 $(TOPTARGETS): $(SUBDIRS)
 $(SUBDIRS):
