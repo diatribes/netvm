@@ -5,7 +5,7 @@ all: clean build
 BIN := dumb-init
 SRC := dumb-init.c
 
-check build: $(BIN)
+check distcheck build: $(BIN)
 	set -xe; file $(BIN)
 
 $(BIN): $(SRC)

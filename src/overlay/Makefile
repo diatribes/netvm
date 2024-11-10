@@ -34,7 +34,7 @@ $(DUMB_INIT_BIN):
 
 
 
-check build: $(CARL_EXIT_CP) $(DUMB_INIT_CP)
+check distcheck build: $(CARL_EXIT_CP) $(DUMB_INIT_CP)
 
 
 clean:

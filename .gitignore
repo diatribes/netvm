@@ -65,3 +65,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+src/dumb-init/dumb-init
+src/carl-exit/carl-exit

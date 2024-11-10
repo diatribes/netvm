@@ -6,7 +6,7 @@ BIN := carl-exit
 OBJ := carl-exit.o
 SRC := carl-exit.asm
 
-check build: $(BIN)
+check distcheck build: $(BIN)
 	set -xe; file $(BIN)
 
 $(OBJ): $(SRC)
