@@ -11,7 +11,7 @@ all: clean build check distcheck
 
 build check distcheck: bzImage
 	@echo build kernel $(current_dir) done
-	@echo kernel in $(CACHE_DIR)
+	file bzImage
 
 .PHONY: CACHE_FILE
 
@@ -20,22 +20,16 @@ $(CACHE_FILE):
 	@$(MAKE) -C $(CACHE_DIR) $(KERNEL_TAR)
 	@file $(CACHE_FILE)
 
-$(BUILD_DIR): $(CACHE_FILE)
+.PHONY: $(BUILD_DIR)
+
+build/arch/x86/boot/bzImage: $(CACHE_FILE)
 	@mkdir -p $(BUILD_DIR)
 	@tar -xJf $(CACHE_FILE) -C $(BUILD_DIR) --strip-components=1
-
-$(KERNEL_CONFIG): $(SRC_KERNEL_CONFIG)
-	@echo "copying kernel config"
-	@cp $(SRC_KERNEL_CONFIG) $(KERNEL_CONFIG)
-
-.PHONY: $(BUILD_DIR)/arch/x86/boot/bzImage
-
-$(BUILD_DIR)/arch/x86/boot/bzImage: $(BUILD_DIR) $(KERNEL_CONFIG)
+	@cp $(SRC_KERNEL_CONFIG) $(BUILD_DIR)/.config
 	@$(MAKE) -C $(BUILD_DIR) -j$(shell nproc) bzImage
 
 bzImage: $(BUILD_DIR)/arch/x86/boot/bzImage
 	@cp $< $@
-	@file $@
 
 clean:
 	@rm -rf $(BUILD_DIR)

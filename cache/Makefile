@@ -18,10 +18,7 @@ linux-%.tar.xz:
 	echo "download kernel $@ version $*"
 	set -xe; curl -sSLO https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-$*.tar.xz
 
-
 clean:
-	echo "Cleaning up..."
-	rm -rf $(LINUX_DIRS)
-	rm -f $(LINUX_TARS)
-	echo "Done!"
-
+	echo "NOT cleaning cache"
+	# @rm -rf $(LINUX_DIRS)
+	# @rm -f $(LINUX_TARS)
