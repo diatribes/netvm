@@ -11,7 +11,7 @@ all: clean build check distcheck
 
 build check distcheck: bzImage
 	@echo build kernel $(current_dir) done
-	file bzImage
+	@file bzImage
 
 .PHONY: CACHE_FILE
 

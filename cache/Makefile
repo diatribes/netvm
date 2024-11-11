@@ -1,6 +1,6 @@
 .SILENT:
 
-all: build check distcheck
+all: clean build check distcheck
 
 LINUX_VERSIONS := 6.8.12
 LINUX_DIRS := $(addprefix linux-,$(LINUX_VERSIONS))
