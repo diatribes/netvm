@@ -7,5 +7,5 @@ if [ ! -d "linux-${KERNELVER}" ]; then
 fi
 cd "linux-${KERNELVER}"
 cp "${SRCPATH}/qemu-kernel-config" .config
-make -j8 && cp arch/x86/boot/bzImage ../../
+make -j8 && cp arch/x86/boot/bzImage "${OUTPUTPATH}"/bzImage
 

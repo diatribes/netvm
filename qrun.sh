@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# Source config.sh
+. ./config.sh
+
 qemu-system-x86_64 \
     -display none \
     -no-user-config \
@@ -6,12 +10,12 @@ qemu-system-x86_64 \
     -m 256 \
     -cpu host \
     -enable-kvm  \
-    -kernel ./bzImage \
+    -kernel "${OUTPUTPATH}"/bzImage \
     -nographic \
     -chardev stdio,id=s1,signal=off \
     -serial none -device isa-serial,chardev=s1 \
     -append "notsc" \
     -netdev user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9 \
     -nic user,model=virtio-net-pci \
-    -initrd rootfs.cpio 
+    -initrd "${OUTPUTPATH}"/rootfs.cpio 
 

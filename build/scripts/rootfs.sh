@@ -38,5 +38,5 @@ chmod +x root/x86_64/fs/dumb-init
 chmod +x root/x86_64/fs/carl-exit
 chmod +x root/x86_64/fs/init
 cd root/x86_64/fs/
-find . | cpio -o -H newc > ../../../../../rootfs.cpio
+find . | cpio -o -H newc > "${OUTPUTPATH}"/rootfs.cpio
 
