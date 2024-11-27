@@ -7,7 +7,7 @@ qemu-system-x86_64 \
     -display none \
     -no-user-config \
     -nodefaults \
-    -m 256 \
+    -m 64 \
     -cpu host \
     -enable-kvm  \
     -kernel "${OUTPUTPATH}"/bzImage \
